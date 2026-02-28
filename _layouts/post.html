@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post-header">
+    <span class="post-date">{{ page.date | date: "%Y年%m月%d日" }}</span>
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+  <div class="post-content">
+    {{ content }}
+  </div>
+  <footer class="post-footer">
+    <a href="{{ '/' | relative_url }}" class="back-link">← 記事一覧に戻る</a>
+  </footer>
+</article>
