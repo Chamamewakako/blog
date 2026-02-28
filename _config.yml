@@ -1,0 +1,15 @@
+title: Chamamewakako's Blog
+description: 創作と日常と、思ったこと。
+url: "https://Chamamewakako.github.io"
+baseurl: "/blog"
+
+lang: ja
+timezone: Asia/Tokyo
+
+# Jekyll設定
+markdown: kramdown
+highlighter: rouge
+
+# 除外ファイル
+exclude:
+  - README.md
