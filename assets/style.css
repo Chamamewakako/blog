@@ -285,3 +285,39 @@ body {
   border: 1px solid var(--border);
   padding: 3px 8px;
 }
+
+/* 目次 */
+#markdown-toc {
+  background: var(--parchment-dark);
+  border: 1px solid var(--border);
+  padding: 16px 24px;
+  margin: 0 0 32px;
+  list-style: none;
+  display: inline-block;
+  min-width: 200px;
+}
+
+#markdown-toc::before {
+  content: "目次";
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 10px;
+}
+
+#markdown-toc li {
+  margin-bottom: 6px;
+}
+
+#markdown-toc a {
+  font-size: 13px;
+  color: var(--ink-light);
+  text-decoration: none;
+  border-bottom: none;
+}
+
+#markdown-toc a:hover {
+  color: var(--crimson);
+}
