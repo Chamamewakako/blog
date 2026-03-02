@@ -159,14 +159,17 @@ body {
   font-size: 17px;
   font-weight: 400;
   margin: 28px 0 12px;
-  color: var(--ink-light);
+  color: var(--ink);
+  padding-left: 10px;
+  border-left: 2px solid var(--gold);
 }
+
 
 .post-content p { margin-bottom: 20px; }
 
 .post-content strong {
-  font-weight: 400;
-  color: var(--crimson);
+  font-weight: 700;
+  color: var(--ink);
 }
 
 .post-content em {
