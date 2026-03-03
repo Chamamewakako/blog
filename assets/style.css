@@ -329,8 +329,12 @@ body {
 
 details {
   margin: 0 0 32px;
+  width: 80%;
 }
-
+#markdown-toc {
+  width: 100%; /* detailsの中なので100%のまま */
+  /* 他はそのまま */
+}
 details summary {
   font-family: 'Cinzel', serif;
   font-size: 11px;
