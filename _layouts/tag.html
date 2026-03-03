@@ -16,30 +16,7 @@ layout: default
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </div>
         {% if post.excerpt %}
-          ---
-layout: default
----
-
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
-
-  <ul class="post-list">
-    {% assign tagged_posts = site.posts | where_exp: "post", "post.tags contains page.tag" %}
-    {% for post in tagged_posts %}
-      <li class="post-list-item">
-        <span class="post-list-date">{{ post.date | date: "%Y年%m月%d日" }}</span>
-        <div class="post-list-title">
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </div>
-        {% if post.excerpt %}
-          <p class="post-list-excerpt">{{ post.excerpt | strip_html | truncate: 80 }}</p>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+          <p class="post-list-excerpt">{{ post.excerpt | strip_html | remove: "目次を開く" | truncate: 80 }}</p>
         {% endif %}
       </li>
     {% endfor %}
