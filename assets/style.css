@@ -324,3 +324,23 @@ body {
 #markdown-toc a:hover {
   color: var(--crimson);
 }
+
+details {
+  margin: 0 0 32px;
+}
+
+details summary {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  cursor: pointer;
+  background: var(--parchment-dark);
+  border: 1px solid var(--border);
+  padding: 10px 16px;
+  list-style: none;
+}
+
+details[open] summary {
+  border-bottom: none;
+}
