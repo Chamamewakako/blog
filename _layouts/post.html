@@ -7,16 +7,16 @@ layout: default
     <span class="post-date">{{ page.date | date: "%Y年%m月%d日" }}</span>
     <h1 class="post-title">{{ page.title }}</h1>
     <div class="post-meta">
-  {% if page.categories %}
-    {% for category in page.categories %}
-      <span class="post-category">{{ category }}</span>
-    {% endfor %}
-  {% endif %}
-  {% if page.tags %}
-    {% for tag in page.tags %}
-      <span class="post-tag"># {{ tag }}</span>
-    {% endfor %}
-  {% endif %}
+{% if page.categories %}
+  {% for category in page.categories %}
+    <a href="{{ '/tag/' | append: category | relative_url }}" class="post-category">{{ category }}</a>
+  {% endfor %}
+{% endif %}
+{% if page.tags %}
+  {% for tag in page.tags %}
+    <a href="{{ '/tag/' | append: tag | relative_url }}" class="post-tag"># {{ tag }}</a>
+  {% endfor %}
+{% endif %}
 　　</div>
   </header>
   <div class="post-content">
