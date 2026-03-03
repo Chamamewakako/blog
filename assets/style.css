@@ -293,11 +293,13 @@ body {
 #markdown-toc {
   background: var(--parchment-dark);
   border: 1px solid var(--border);
+  border-top: none;
   padding: 16px 24px;
   margin: 0 0 32px;
   list-style: none;
-  display: inline-block;
-  min-width: 200px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #markdown-toc::before {
