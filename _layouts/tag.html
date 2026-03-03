@@ -8,7 +8,7 @@ layout: default
   </header>
 
   <ul class="post-list">
-    {% assign tagged_posts = site.posts | where_exp: "post", "post.tags contains page.tag" %}
+    {% assign tagged_posts = site.posts | where_exp: "post", "post.tags contains page.tag or post.categories contains page.tag" %}
     {% for post in tagged_posts %}
       <li class="post-list-item">
         <span class="post-list-date">{{ post.date | date: "%Y年%m月%d日" }}</span>
