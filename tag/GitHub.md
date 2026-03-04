@@ -1,5 +1,5 @@
 ---
 layout: tag
-title: "# GitHub"
+title: "GitHub"
 tag: GitHub
 ---
