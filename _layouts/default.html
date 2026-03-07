@@ -10,12 +10,18 @@
 </head>
 <body>
   <header class="site-header">
+  <div class="header-image-wrap">
+    <img src="{{ '/assets/Header_ランタン.png' | relative_url }}" 
+         alt="図書館とランタン" 
+         class="header-img">
     <div class="header-inner">
       <span class="header-eyebrow">Sway, Sway, Lantern of Thought.<br>Light up the Compass<br>within your Heart.</span>
       <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
       <p class="site-desc">{{ site.description }}</p>
     </div>
-  </header>
+  </div>
+</header>
+
 
   <main class="main-content">
     {{ content }}
