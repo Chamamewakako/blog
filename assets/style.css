@@ -43,7 +43,7 @@ body {
   text-decoration: none;
   letter-spacing: 0.05em;
   display: block;
-  margin-bottom: 13px;
+  margin-bottom: 8px;
 }
 
 
@@ -360,5 +360,5 @@ details[open] summary {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 10%;
+  padding-top: 15%;
 }
