@@ -67,7 +67,7 @@ body {
 
 .post-list-item {
   border-bottom: 1px solid var(--border);
-  padding: 28px 0;
+  padding: 16px 0;
 }
 
 .post-list-item:last-child { border-bottom: none; }
