@@ -4,24 +4,189 @@ title: 404
 permalink: /404.html
 ---
 
-<div class="post" style="text-align: center; padding: 60px 24px;">
+<!DOCTYPE html>
 
-  <p style="font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.5em; color: var(--gold); margin-bottom: 32px;">
-    E R R O R · 4 0 4
-  </p>
+<html lang="ja">
+<head>
+<link rel="icon" type="image/png" href="assets/oct_apple-touch_icon.png">
+<link rel="apple-touch-icon" href="assets/oct_apple-touch_icon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Circulus Octo Spectuum</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=IM+Fell+English:ital@0;1&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --parchment:  #f0e8d5;
+    --ink:        #2c1f14;
+    --ink-light:  #5a3e28;
+    --gold:       #8B6914;
+    --gold-light: #c4a862;
+    --border:     rgba(139,105,20,0.3);
+  }
 
-  <h1 style="font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 400; margin-bottom: 24px;">
-    本の中の呪文が、<br>逃げ出しました。
-  </h1>
+- { margin:0; padding:0; box-sizing:border-box; }
 
-  <p style="font-family: 'IM Fell English', serif; font-style: italic; font-size: 16px; color: var(--ink-light); margin-bottom: 48px;">
-    現在、図書館中を捜索しています。<br>
-    しばらくお待ちいただくか、<br>
-    別の扉をお試しください。
-  </p>
+body {
+background-color: var(–parchment);
+background-image:
+url(“data:image/svg+xml,%3Csvg xmlns=‘http://www.w3.org/2000/svg’ width=‘400’ height=‘400’%3E%3Cfilter id=‘noise’%3E%3CfeTurbulence type=‘fractalNoise’ baseFrequency=‘0.9’ numOctaves=‘4’ stitchTiles=‘stitch’/%3E%3CfeColorMatrix type=‘saturate’ values=‘0’/%3E%3C/filter%3E%3Crect width=‘400’ height=‘400’ filter=‘url(%23noise)’ opacity=‘0.04’/%3E%3C/svg%3E”);
+color: var(–ink);
+font-family: ‘Noto Serif JP’, serif;
+font-weight: 300;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+overflow-x: hidden;
+}
 
-  <a href="{{ '/' | relative_url }}" style="font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 0.3em; color: var(--gold); text-decoration: none;">
-    ← 図書館の入口に戻る
-  </a>
+body::after {
+content: ‘’;
+position: fixed; inset: 0; z-index: 0; pointer-events: none;
+background:
+radial-gradient(ellipse 100% 20% at 50% 0%,   rgba(44,31,20,0.10) 0%, transparent 70%),
+radial-gradient(ellipse 100% 20% at 50% 100%,  rgba(44,31,20,0.12) 0%, transparent 70%);
+}
 
+/* ルーンバンド */
+.rune-band {
+position: fixed;
+top: 0; left: 0; right: 0;
+z-index: 10;
+width: 100%; padding: 12px 0;
+border-bottom: 1px solid var(–border);
+display: flex; align-items: center; justify-content: center; gap: 20px;
+background: rgba(240,232,213,0.85);
+backdrop-filter: blur(4px);
+}
+.rune-band a {
+font-family: ‘Cinzel’, serif;
+font-size: 11px;
+letter-spacing: 0.5em;
+color: var(–gold);
+opacity: 0.85;
+text-transform: uppercase;
+text-decoration: none;
+transition: opacity 0.2s;
+}
+.rune-band a:hover { opacity: 1; }
+.gem {
+width: 5px; height: 5px;
+background: var(–gold);
+opacity: 0.4;
+transform: rotate(45deg);
+flex-shrink: 0;
+}
+
+/* メイン */
+.wrap {
+position: relative; z-index: 1;
+text-align: center;
+padding: 100px 28px 80px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 0;
+}
+
+.magic-img {
+width: min(75vw, 460px);
+height: auto;
+mix-blend-mode: multiply;
+filter: drop-shadow(0 0 24px rgba(140,80,200,0.25));
+animation: float 6s ease-in-out infinite;
+margin-bottom: 8px;
+}
+
+@keyframes float {
+0%,100% { transform: translateY(0px); }
+50%      { transform: translateY(-12px); }
+}
+
+.error-eyebrow {
+font-family: ‘Cinzel’, serif;
+font-size: 11px;
+letter-spacing: 0.5em;
+color: var(–gold);
+opacity: 0.75;
+text-transform: uppercase;
+margin-bottom: 14px;
+animation: rise 1s ease both;
+}
+
+.error-title {
+font-family: ‘IM Fell English’, serif;
+font-size: clamp(18px, 4.5vw, 26px);
+font-weight: 400;
+color: var(–ink);
+margin-bottom: 16px;
+animation: rise 1.1s ease both;
+}
+
+.error-desc {
+font-family: ‘Noto Serif JP’, serif;
+font-size: 13px;
+font-weight: 300;
+color: var(–ink-light);
+line-height: 2;
+margin-bottom: 44px;
+animation: rise 1.2s ease both;
+}
+
+.back-link {
+display: inline-flex;
+align-items: center;
+gap: 12px;
+padding: 13px 36px;
+border: 1px solid var(–border);
+font-family: ‘Cinzel’, serif;
+font-size: 11px;
+letter-spacing: 0.4em;
+color: var(–gold);
+text-decoration: none;
+text-transform: uppercase;
+transition: background 0.25s, border-color 0.25s, color 0.25s;
+animation: rise 1.3s ease both;
+}
+.back-link:hover {
+background: rgba(139,105,20,0.08);
+border-color: var(–gold-light);
+color: var(–ink);
+}
+
+@keyframes rise {
+from { opacity:0; transform:translateY(16px); }
+to   { opacity:1; transform:translateY(0); }
+}
+</style>
+
+</head>
+<body>
+
+<div class="rune-band">
+  <div class="gem"></div>
+  <a href="index.html">Circulus · Octo · Spectuum</a>
+  <div class="gem"></div>
 </div>
+
+<div class="wrap">
+  <img class="magic-img" src="assets/magic_circle_for_404.PNG" alt="404 magic circle">
+  <p class="error-eyebrow">Error · 404 · Not Found</p>
+  <h1 class="error-title"> 呪文が逃げ出してしまいました！　</h1>
+  <p class="error-desc">
+    大変申し訳ありません。<br>
+    魔導書から呪文が逃げ出してしまいました。<br>
+    現在図書館内を捜索しております。<br>
+    このままお待ちいただくか、<br>
+    魔法陣の導きに従い、いちど図書館へお戻りください。
+  </p>
+  <a class="back-link" href="index.html">
+    <span style="width:5px;height:5px;background:var(--gold);opacity:0.5;transform:rotate(45deg);display:inline-block;"></span>
+    図書館へ戻る
+    <span style="width:5px;height:5px;background:var(--gold);opacity:0.5;transform:rotate(45deg);display:inline-block;"></span>
+  </a>
+</div>
+
+</body>
+</html>
